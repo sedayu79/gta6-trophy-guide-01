@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI PS5 tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: roadmap to the platinum, missable flags, cited guides, progress saved in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="mark" aria-hidden="true">VI</div>
+    <div>
+      <h1>Leonida Trophy Guide</h1>
+      <p class="sub">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies &middot; offline, no account, no network</p>
+    </div>
+  </div>
+  <div class="progress-wrap" aria-live="polite">
+    <div class="progress-line"><strong id="earnedCount">0</strong> of <span id="totalCount">55</span> earned &middot; <span id="earnedPct">0%</span> to the platinum</div>
+    <div class="bar"><div class="bar-fill" id="barFill" style="width:0%"></div></div>
+    <div class="grade-counts" id="gradeCounts"></div>
+  </div>
+</header>
+
+<nav class="controls" aria-label="Tracker controls">
+  <div class="control-row">
+    <label class="search">Search
+      <input id="search" type="search" placeholder="Trophy name or keyword…" autocomplete="off">
+    </label>
+    <label class="check"><input id="spoilers" type="checkbox"> Hide story spoilers</label>
+    <label class="check"><input id="hideEarned" type="checkbox"> Hide earned</label>
+    <span class="mini-progress" id="miniProgress" aria-live="polite"></span>
+  </div>
+  <div class="control-row">
+    <div class="kinds" id="kindButtons" role="group" aria-label="Filter by kind">
+      <button type="button" data-kind="all" class="kind active">All <span class="n" data-n="all"></span></button>
+      <button type="button" data-kind="story" class="kind">Story <span class="n" data-n="story"></span></button>
+      <button type="button" data-kind="missable" class="kind">Missable <span class="n" data-n="missable"></span></button>
+      <button type="button" data-kind="collectibles" class="kind">Collectibles <span class="n" data-n="collectibles"></span></button>
+      <button type="button" data-kind="activities" class="kind">Activities <span class="n" data-n="activities"></span></button>
+      <button type="button" data-kind="online" class="kind">Online <span class="n" data-n="online"></span></button>
+    </div>
+    <label class="grade-filter">Grade
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+  </div>
+  <div class="control-row">
+    <button id="exportBtn" type="button">Export progress</button>
+    <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button id="resetBtn" type="button" class="quiet">Reset progress</button>
+    <span class="save-note" id="saveNote">Progress saves in this browser automatically.</span>
+  </div>
+</nav>
+
+<main>
+  <section id="roadmap" class="roadmap" aria-labelledby="roadmapTitle">
+    <h2 id="roadmapTitle">Roadmap to the platinum</h2>
+    <p class="roadmap-intro">About 200 to 300 hours, difficulty roughly 4 out of 10. No online trophies, no difficulty trophies, no mission medals. One trophy can be missed. Work the stages in order and the platinum follows.</p>
+    <details id="roadmapDetails">
+      <summary>Show the 5 stages</summary>
+      <div class="stages" id="stages"></div>
+    </details>
+  </section>
+
+  <section class="list-section" aria-labelledby="listTitle">
+    <h2 id="listTitle">All 55 trophies</h2>
+    <p class="list-note" id="listNote"></p>
+    <div id="trophyList" class="trophy-list"></div>
+    <p class="empty" id="emptyMsg" hidden>No trophies match these filters. Try clearing the search or picking another kind.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Guide text is written for this guide in our own words, with the source of each fact named beside it. Trophy names, descriptions and grades are shown as PlayStation publishes them. This is a fan-made tracker, not affiliated with Rockstar Games, and it shows no Rockstar logo, artwork or game screenshots.</p>
+  <p>Sources: the official PSN trophy list as listed by Exophase and PSNProfiles; Push Square's GTA 6 Trophy Guide &amp; Roadmap; GTABase; Output Lag; planetgta6. Unconfirmed methods are marked as such.</p>
+  <p class="offline-note">Works fully offline: every file it loads lives in this folder, and your progress never leaves this browser.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
